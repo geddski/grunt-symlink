@@ -1,0 +1,38 @@
+{
+  "name": "grunt-symlink",
+  "description": "Create symlinks",
+  "version": "0.1.0",
+  "homepage": "https://github.com/geddesign/grunt-symlink",
+  "author": {
+    "name": "Dave Geddes",
+    "email": "davidcgeddes@gmail.com",
+    "url": "geddesign.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/geddesign/grunt-symlink.git"
+  },
+  "bugs": {
+    "url": "https://github.com/geddesign/grunt-symlink/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/geddesign/grunt-symlink/blob/master/LICENSE-MIT"
+    }
+  ],
+  "main": "Gruntfile.js",
+  "bin": "bin/grunt-symlink",
+  "engines": {
+    "node": ">= 0.6.0"
+  },
+  "scripts": {
+    "test": "grunt nodeunit"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.0a"
+  },
+  "keywords": [
+    "gruntplugin"
+  ]
+}
