@@ -1,7 +1,7 @@
 {
   "name": "grunt-symlink",
   "description": "Create symlinks",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "homepage": "https://github.com/geddesign/grunt-symlink",
   "author": {
     "name": "Dave Geddes",
@@ -30,7 +30,7 @@
     "test": "grunt nodeunit"
   },
   "devDependencies": {
-    "grunt": "~0.4.0a"
+    "grunt": "0.4.x",
   },
   "keywords": [
     "gruntplugin"

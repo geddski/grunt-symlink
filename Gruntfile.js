@@ -2,9 +2,11 @@ module.exports = function(grunt) {
   grunt.initConfig({
     
     symlink: {
-      links: [
-        { link: 'test/symlinks/images', to: '../images', type: 'dir' }
-      ]
+      images: {
+        dest: 'test/symlinks/images',
+        relativeSrc: '../images',
+        options: {type: 'dir'}
+      }
     },
 
     watch: {
@@ -27,5 +29,5 @@ module.exports = function(grunt) {
   });
 
   grunt.loadTasks('tasks');
-  grunt.registerTask('test', ['mocha']);
+  grunt.registerTask('test', ['symlink', 'mocha']);
 };
