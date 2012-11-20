@@ -20,22 +20,26 @@ In your Gruntfile add:
 
 ```js
 symlink: {
-  links: [
-    { link: 'path/to/new/symlink', to: '../path/to/original', type: 'dir'}
-  ]
+  images: {
+    dest: 'path/to/new/symlink',
+    relativeSrc: '../path/to/original',
+    options: {type: 'dir'} // 'file' by default
+  }
 }
 ```
- **Important**: `link` is relative to your project's root directory, but `to` is relative to `link`. For example:
+ **Important**: `dest` is relative to your project's root directory, but `relativeSrc` is relative to `dest`. For example:
 
 ```js
-symlinks: {
-  links: [
-    { link: 'frontend-build/videos', to '../videos'}
-  ]
+symlink: {
+  images: {
+    dest: 'frontend-build/videos',
+    relativeSrc: '../videos',
+    options: {type: 'dir'}
+  }
 }
 ```
 
-So in this case `grunt-symlink` will create a new symlink at `myproject/frontend-build/videos` that points to `myproject/videos`, because `to` in this case is relative to the `frontend-build` directory. 
+So in this case `grunt-symlink` will create a new symlink at `myproject/frontend-build/videos` that points to `myproject/videos`, because `relativeSrc` in this case is relative to the `frontend-build` directory. 
 
 `type` can either be `dir`, `file` (default), or `junction`. See [Node docs on symlinks](http://nodejs.org/api/fs.html#fs_fs_symlink_srcpath_dstpath_type_callback).
 
