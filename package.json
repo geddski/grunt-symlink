@@ -30,7 +30,7 @@
     "test": "grunt nodeunit"
   },
   "devDependencies": {
-    "grunt": "0.4.x",
+    "grunt": "0.4.x"
   },
   "keywords": [
     "gruntplugin"
