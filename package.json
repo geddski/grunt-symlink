@@ -1,7 +1,7 @@
 {
   "name": "grunt-symlink",
-  "description": "Create symlinks",
-  "version": "0.2.0",
+  "description": "Create symlinks in your project, usually during a build process.",
+  "version": "0.3.0",
   "homepage": "https://github.com/geddesign/grunt-symlink",
   "author": {
     "name": "Dave Geddes",
@@ -27,9 +27,14 @@
     "node": ">= 0.6.0"
   },
   "scripts": {
-    "test": "grunt nodeunit"
+    "test": "grunt test"
   },
   "devDependencies": {
+    "grunt": "~0.4.0",
+    "mocha": "~1.8.1",
+    "should": "~1.2.1"
+  },
+  "peerDependencies": {
     "grunt": "0.4.x"
   },
   "keywords": [

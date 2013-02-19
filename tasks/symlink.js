@@ -11,11 +11,12 @@ var fs = require('fs');
 module.exports = function(grunt) {
   grunt.registerMultiTask('symlink', 'Create symlinks.', function() {
     var options = this.options();
-    var src = this.file.relativeSrc;
-    var dest = this.file.dest;
+
+    var src = this.data.relativeSrc;
+    var dest = this.data.dest;
     try{
-      console.log('dest', dest);
-      console.log('src', src);
+      grunt.log.ok('src', src);
+      grunt.log.ok('dest', dest);
       fs.symlinkSync(src, dest, options.type || 'file');
       var rel = dest.substr(0, dest.lastIndexOf('/') + 1);
       grunt.log.ok('created symlink at ' + dest + 
