@@ -1,6 +1,6 @@
 /*
  * grunt-symlink
- * https://github.com/geddesign/grunt-symlink
+ * https://github.com/geddski/grunt-symlink
  *
  * Copyright (c) 2012 Dave Geddes
  * Licensed under the MIT license.
