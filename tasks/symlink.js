@@ -13,6 +13,9 @@ module.exports = function(grunt) {
     var options = this.options();
 
     var src = this.data.relativeSrc;
+    if (!fs.existsSync(src)) {
+     grunt.log.error(src + ' does not exist.');
+    }
     var dest = this.data.dest;
     try{
       grunt.log.ok('src', src);
