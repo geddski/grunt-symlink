@@ -28,6 +28,11 @@ module.exports = function(grunt) {
       if (e.code === 'EEXIST'){
         return grunt.log.error(dest + ' already exists, skipping');
       }
+      else if (e.code === 'EPERM' && /^win/.test(process.platform)){
+        return grunt.fail.warn('For symlinks to work on Windows you have ' +
+          'to run the cmd as administrator, ' +
+          'or setup read permissions correctly.');
+      }
       grunt.fail.warn(e);
     }
   });
